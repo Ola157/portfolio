@@ -1,10 +1,23 @@
 import React, { useState, useEffect, useRef } from "react";
-import { FaTools, FaServer, FaCode, FaDatabase, FaBrain, FaUsers, FaWindows, FaMicrosoft, FaLaptopCode, FaMobileAlt, FaProjectDiagram, FaCogs } from "react-icons/fa";
+import {
+  FaTools,
+  FaServer,
+  FaCode,
+  FaDatabase,
+  FaBrain,
+  FaUsers,
+  FaWindows,
+  FaMicrosoft,
+  FaLaptopCode,
+  FaMobileAlt,
+  FaProjectDiagram,
+  FaCogs,
+} from "react-icons/fa";
 import { Container, Row, Col, Nav, Navbar, Carousel } from "react-bootstrap";
 import "./Info.css";
 import "./CustomButton.css";
-import { Timeline } from "../../components";import { getDoc, doc } from "firebase/firestore";
-
+import { Timeline } from "../../components";
+import { getDoc, doc } from "firebase/firestore";
 
 const CustomMenuButton = ({ isExpanded, onToggle }) => {
   return (
@@ -22,14 +35,14 @@ const CustomMenuButton = ({ isExpanded, onToggle }) => {
 };
 
 const Info = () => {
-  const [isExpanded, setIsExpanded] = useState(false); 
+  const [isExpanded, setIsExpanded] = useState(false);
   const [activeSection, setActiveSection] = useState("For everyone");
   const [activeMenu, setActiveMenu] = useState("about-me");
   const [scrambledText, setScrambledText] = useState("");
-  const [resumeUrl, setResumeUrl] = useState("/resume/301560414.pdf");
+  const [resumeUrl, setResumeUrl] = useState(
+    "/resume/Abdullahi_Alao_Resume_Junior_Developer.pdf"
+  );
   const [displayedText, setDisplayedText] = useState("");
-
-
 
   const sectionsName = [
     "About Me",
@@ -64,8 +77,6 @@ const Info = () => {
     setActiveMenu(key); // Set the active menu item
     setIsExpanded(false); // Close the menu
   };
-
-  
 
   useEffect(() => {
     const fullText = content[activeSection];
@@ -196,18 +207,17 @@ const Info = () => {
               <Col md={6}>
                 <div className="about-carousel">
                   <Carousel controls={true} indicators={false}>
-                    {[
-                      "./images/Info/1.png",
-                      "./images/Info/2.png",
-                    ].map((src, index) => (
-                      <Carousel.Item key={index}>
-                        <img
-                          className="d-block w-100 rounded-4"
-                          src={src}
-                          alt={`Slide ${index + 1}`}
-                        />
-                      </Carousel.Item>
-                    ))}
+                    {["./images/Info/1.png", "./images/Info/2.png"].map(
+                      (src, index) => (
+                        <Carousel.Item key={index}>
+                          <img
+                            className="d-block w-100 rounded-4"
+                            src={src}
+                            alt={`Slide ${index + 1}`}
+                          />
+                        </Carousel.Item>
+                      )
+                    )}
                   </Carousel>
                 </div>
               </Col>
@@ -216,14 +226,14 @@ const Info = () => {
               <Col md={6}>
                 <div className="about-text">
                   <p>
-                  I'm a Computer Programming graduate from Humber Polytechnic, 
-                  ready to apply my skills in junior developer roles.
+                    I'm a Computer Programming graduate from Humber Polytechnic,
+                    ready to apply my skills in junior developer roles.
                   </p>
                   <p>
-                  I enjoy building software that solves real problems and 
-                  improves how people live or work. I'm especially interested in 
-                  joining a team where I can grow, contribute, and keep learning 
-                  new technologies.
+                    I enjoy building software that solves real problems and
+                    improves how people live or work. I'm especially interested
+                    in joining a team where I can grow, contribute, and keep
+                    learning new technologies.
                   </p>
                 </div>
               </Col>
@@ -237,16 +247,17 @@ const Info = () => {
           >
             <h2>Programming Journey</h2>
             <p>
-            My journey began four years ago with my first Python script using W3Schools. 
-            That small experience sparked a long-term interest in coding. Since then, 
-            I’ve built Python games, and automation tools. I also explored 
-            web scraping and browser automation with Selenium.
+              My journey began four years ago with my first Python script using
+              W3Schools. That small experience sparked a long-term interest in
+              coding. Since then, I’ve built Python games, and automation tools.
+              I also explored web scraping and browser automation with Selenium.
             </p>
             <p>
-            At Humber, I gained hands-on experience building projects with the MERN stack, Django, 
-            and Java. I worked with tools like Git, Postman, and Firebase while collaborating on 
-            both solo and team projects. I’m always building, always curious, and always learning 
-            — applying what I learn to solve real problems.
+              At Humber, I gained hands-on experience building projects with the
+              MERN stack, Django, and Java. I worked with tools like Git,
+              Postman, and Firebase while collaborating on both solo and team
+              projects. I’m always building, always curious, and always learning
+              — applying what I learn to solve real problems.
             </p>
 
             <div className="timeline-container">
@@ -260,68 +271,74 @@ const Info = () => {
           >
             <h2>Professional Experience & Projects</h2>
             <p>
-            During my time as a Peer Tutor at Humber Polytechnic, I supported fellow 
-            students by simplifying complex topics and guiding them through hands-on problem-solving. 
-            This experience taught me how to explain ideas clearly, be patient, and adapt my approach 
-            based on different learning styles.  
+              During my time as a Peer Tutor at Humber Polytechnic, I supported
+              fellow students by simplifying complex topics and guiding them
+              through hands-on problem-solving. This experience taught me how to
+              explain ideas clearly, be patient, and adapt my approach based on
+              different learning styles.
             </p>
             <div>
-             
               <p>
-                You can explore my projects on the{" "}
-                <strong>Work Page</strong>.
+                You can explore my projects on the <strong>Work Page</strong>.
               </p>
               <p>
                 <strong>Technical Stack:</strong>
               </p>
-              
-<ul>
-  <li>
-    <FaCode className="icon" /> <strong>Programming Languages:</strong> 
-    JavaScript, Python, Java,
-  </li>
 
-  <li>
-    <FaLaptopCode className="icon" /> <strong>Frontend Development:</strong> 
-    React, Next.js, HTML, CSS, Tailwind CSS, Bootstrap
-  </li>
+              <ul>
+                <li>
+                  <FaCode className="icon" />{" "}
+                  <strong>Programming Languages:</strong>
+                  JavaScript, Python, Java,
+                </li>
 
-  <li>
-    <FaServer className="icon" /> <strong>Backend & API:</strong> 
-    Node.js, Express.js, Django, Flask, Java (Spring Boot), REST APIs
-  </li>
+                <li>
+                  <FaLaptopCode className="icon" />{" "}
+                  <strong>Frontend Development:</strong>
+                  React, Next.js, HTML, CSS, Tailwind CSS, Bootstrap
+                </li>
 
-  <li>
-    <FaDatabase className="icon" /> <strong>Databases & Storage:</strong> 
-    MongoDB, SQL, Firebase
-  </li>
+                <li>
+                  <FaServer className="icon" /> <strong>Backend & API:</strong>
+                  Node.js, Express.js, Django, Flask, Java (Spring Boot), REST
+                  APIs
+                </li>
 
-  <li>
-    <FaCogs className="icon" /> <strong>Version Control & Tools:</strong> 
-    Git, GitHub, Postman, Vercel, Git CLI
-  </li>
+                <li>
+                  <FaDatabase className="icon" />{" "}
+                  <strong>Databases & Storage:</strong>
+                  MongoDB, SQL, Firebase
+                </li>
 
-  <li>
-    <FaTools className="icon" /> <strong>Automation & Scripting:</strong> 
-    Python scripting, Telegram Bots, API automation, Web scraping
-  </li>
+                <li>
+                  <FaCogs className="icon" />{" "}
+                  <strong>Version Control & Tools:</strong>
+                  Git, GitHub, Postman, Vercel, Git CLI
+                </li>
 
-  <li>
-    <FaMobileAlt className="icon" /> <strong>Mobile Development:</strong> 
-    React Native 
-  </li>
+                <li>
+                  <FaTools className="icon" />{" "}
+                  <strong>Automation & Scripting:</strong>
+                  Python scripting, Telegram Bots, API automation, Web scraping
+                </li>
 
-  <li>
-    <FaBrain className="icon" /> <strong>CS Fundamentals:</strong> 
-    Data Structures, Algorithms, Problem Solving, SDLC, Agile
-  </li>
+                <li>
+                  <FaMobileAlt className="icon" />{" "}
+                  <strong>Mobile Development:</strong>
+                  React Native
+                </li>
 
-  <li>
-    <FaUsers className="icon" /> <strong>Soft Skills:</strong> 
-    Teamwork, Communication, Time Management, Adaptability, Mentoring
-  </li>
-</ul>
+                <li>
+                  <FaBrain className="icon" /> <strong>CS Fundamentals:</strong>
+                  Data Structures, Algorithms, Problem Solving, SDLC, Agile
+                </li>
 
+                <li>
+                  <FaUsers className="icon" /> <strong>Soft Skills:</strong>
+                  Teamwork, Communication, Time Management, Adaptability,
+                  Mentoring
+                </li>
+              </ul>
             </div>
           </div>
 
@@ -343,7 +360,6 @@ const Info = () => {
                       "./images/Hobbies/4.jpg",
                       "./images/Hobbies/5.jpg",
                       "./images/Hobbies/6.jpg",
-                     
                     ].map((src, index) => (
                       <Carousel.Item key={index}>
                         <img
@@ -360,17 +376,18 @@ const Info = () => {
               {/* Right Column: Text */}
               <Col md={6}>
                 <div className="hobbies-text">
-                <p>
-                 I enjoy exploring nature, it helps me think clearly and unwind 
-                 after a long day. Playing soccer is another way I stay active and 
-                 build teamwork skills
-                </p>
-                <p>
-                  I often spend time brainstorming ideas for new projects or ways to 
-                  make life easier with code. I'm inspired by the mindset of being 
-                  "so good they can't ignore you" — it reminds me to focus on building 
-                  real skills and staying consistent.
-                </p>
+                  <p>
+                    I enjoy exploring nature, it helps me think clearly and
+                    unwind after a long day. Playing soccer is another way I
+                    stay active and build teamwork skills
+                  </p>
+                  <p>
+                    I often spend time brainstorming ideas for new projects or
+                    ways to make life easier with code. I'm inspired by the
+                    mindset of being "so good they can't ignore you" — it
+                    reminds me to focus on building real skills and staying
+                    consistent.
+                  </p>
                 </div>
               </Col>
             </Row>
