@@ -1,0 +1,64 @@
+/* Footer.css */
+.custom-footer {
+    background-color: var(--color-bg);
+    backdrop-filter: blur(10px);
+    padding: 20px 0;
+    margin-top: 40px;
+    font-family: "Arial", sans-serif;
+    color: var(--color-text-secondary);
+    border-top: 1px solid var(--color-border);
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+  }
+  
+  .footer-section {
+    margin-bottom: 10px;
+  }
+  
+  .footer-link {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-link:hover {
+    color: var(--color-accent);
+  }
+  
+  .footer-icon:hover {
+    color: var(--color-accent2);
+  }
+
+  .footer-icon.linkedin:hover {
+    color: #0a66c2;
+  }
+
+  .footer-icon {
+    color: var(--color-text-secondary);
+    margin-left: 15px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-section {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  .footer-up-btn {
+    border: 1px solid #232323;
+    color: #232323;
+    background: #fff;
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 2px 16px;
+    margin-left: 8px;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+  }
+  .footer-up-btn:hover {
+    background: #232323;
+    color: #fff;
+    border: 1px solid #fff;
+  }

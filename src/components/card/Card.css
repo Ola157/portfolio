@@ -1,0 +1,191 @@
+/* Card Container */
+.card-container {
+  width: 30%;
+  min-width: 280px;
+  max-width: 350px;
+  margin: 0px auto 0 auto; /* Center cards horizontally with larger spacing */
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 16px; /* Smooth border radius */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08); /* Enhanced shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.card-container:hover {
+  transform: scale(1.02); /* Slight hover effect */
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.6), 0 0 10px rgba(255, 255, 255, 0.6); /* More pronounced hover shadow with white */
+}
+
+/* Card Content */
+.card-content {
+  text-align: left; /* Align content to the left for better readability */
+  /* padding: 24px; */
+}
+
+/* Card Image */
+.card-image img {
+  width: 100%;
+  height: 350px; /* Set consistent height for images */
+  border-radius: 16px 16px 0 0; /* Only top corners rounded */
+  object-fit: cover; /* Ensure image fits properly */
+  /* margin-bottom: 20px;  */
+}
+
+/* Card Text */
+.card-text {
+  padding: 16px 0;
+}
+
+.modal-description p{
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-size: 1.8rem; /* Larger font size for title */
+  font-weight: bold;
+  color: #232323;
+  margin: 0 0 8px 10px;
+}
+
+.card-description {
+  font-size: 1.2rem; /* Larger description font size */
+  color: #232323;
+  margin: 0 0 0 10px;
+}
+
+@media (max-width: 1200px) {
+  .card-container {
+    width: 45%;
+  }
+}
+
+@media (max-width: 800px) {
+  .card-container {
+    width: 90% !important;
+    max-width: 100%;
+  }
+}
+
+/* Modal Customization */
+.custom-modal .modal-content {
+  background-color: #121212; /* Dark background for modal */
+  color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
+  max-width: 1200px !important; /* Limit modal width on larger screens */
+  margin: auto; /* Center the modal horizontally */
+}
+
+.custom-modal .modal-body {
+  display: flex; /* Flexbox layout for image and text */
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  gap: 20px; /* Spacing between the image and text */
+}
+
+.modal-carousel-container {
+  width: 75%;
+}
+.custom-modal .modal-body img {
+  border-radius: 12px;
+  max-height: 500px; /* Increased height for larger images */
+  object-fit: cover;
+  flex: 1; /* Image takes up equal space */
+}
+
+.custom-modal .modal-body .modal-text-container {
+  flex: 1;
+  align-self: flex-start;
+  text-align: left;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.139) rgba(0, 0, 0, 0.2);
+}
+.custom-modal .modal-body .modal-text-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-modal .modal-body .modal-text-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.203); 
+  border-radius: 10px; 
+}
+
+.custom-modal .modal-body .modal-text-container::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2); 
+}
+.custom-modal .modal-title {
+  font-size: 2rem; /* Larger title font size */
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.modal-dialog {
+  max-width: 1200px;
+}
+
+@media (max-width: 768px) {
+  .custom-modal .modal-body {
+    flex-direction: column; /* Stack image and text vertically on smaller screens */
+  }
+
+  .modal-carousel-container {
+    width: 100%;
+  }
+
+  .modal-body .d-flex {
+    flex-direction: column;
+  }
+
+  .custom-modal .modal-body img {
+    max-width: 100%; /* Allow the image to scale down on smaller screens */
+    margin-bottom: 16px; /* Add spacing below the image */
+  }
+  .custom-modal .modal-body {
+    padding: 0;
+  }
+
+  .modal-text-container p {
+    margin: 10px 10px 0 10px;
+  }
+  .modal-text-container h3 {
+    margin: 0 10px 0 10px;
+  }
+  .modal-dialog {
+    max-width: 1200px;
+    margin: 0 auto 0 auto;
+  }
+}
+
+.modal-body .text-center {
+  position: sticky;
+  bottom: 0;
+  padding: 10px;
+  z-index: 100;
+}
+
+/* Modal Tags */
+.modal-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem; /* Add spacing above the tags */
+}
+
+.modal-tag {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.1); /* Light background */
+  color: rgba(255, 255, 255, 0.8); /* Slightly muted white */
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 12px; /* Rounded edges */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.modal-tag:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Brighter hover background */
+  color: white; /* Bright white text */
+}

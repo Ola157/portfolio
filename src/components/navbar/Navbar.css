@@ -1,0 +1,87 @@
+/* General Navbar styling */
+.custom-navbar {
+  position: sticky; /* Keeps the navbar at the top */
+  top: 0; /* Sticks it to the top */
+  z-index: 10; /* Ensures it stays on top of other elements */
+  background-color: var(--color-bg);
+  backdrop-filter: blur(10px); /* Adds a blurred glass effect */
+  padding: 5px 20px;
+  border-bottom: 1px solid var(--color-border); /* Subtle border at the bottom */
+  font-family: "Roboto", sans-serif;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* Smooth transitions */
+}
+
+/* Navbar brand styling */
+.navbar-brand {
+  color: var(--color-text);
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar-brand:hover {
+  color: var(--color-text); /* No color change on hover */
+}
+
+.navbar-brand .subtitle {
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: var(--color-text-secondary);
+  margin-top: -5px;
+}
+
+/* Links and buttons */
+.slider-links {
+  display: flex;
+  gap: 10px;
+}
+
+.slider-button {
+  border: none;
+  border-radius: 20px;
+  padding: 5px 15px;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  background: var(--color-card-bg);
+  transition: all 0.3s ease-in-out;
+}
+
+.slider-button:hover {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+
+.icon-button {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.icon-button:hover {
+  color: var(--color-accent2);
+}
+
+/* Centering the Switcher component */
+.custom-navbar .switcher-container {
+  flex: 1; /* Takes the available space */
+  display: flex;
+  justify-content: center; /* Centers the Switcher horizontally */
+}
+
+/* Navbar icons adjustments */
+.navbar-icons {
+  margin-left: 80px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .navbar-icons {
+    margin-left: 0px;
+  }
+}
+
+.linkedin:hover {
+  color: #0a66c2;
+}

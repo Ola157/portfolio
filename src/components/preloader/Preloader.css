@@ -1,0 +1,65 @@
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slideUpScreen 1.5s ease-in-out forwards;
+  animation-delay: 0.8s;
+  z-index: 1000;
+}
+
+.preloader-text {
+  font-size: 3rem;
+  font-family: "Roboto", sans-serif;
+  animation: slideInRight 0.7s ease-in-out;
+  text-align: center; /* Ensures text is center-aligned */
+}
+
+.highlight {
+  color: var(--color-accent);
+  font-style: italic;
+}
+
+/* Add media queries for responsiveness */
+@media (max-width: 768px) { /* For tablets and smaller screens */
+  .preloader-text {
+    font-size: 2rem; /* Reduce font size */
+  }
+}
+
+@media (max-width: 480px) { /* For mobile devices */
+  .preloader-text {
+    font-size: 1.5rem; /* Further reduce font size */
+    padding: 0 1rem; /* Add padding for better text readability */
+  }
+
+  .preloader {
+    padding: 20px; /* Ensure the preloader content has some space */
+  }
+}
+
+@keyframes slideUpScreen {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-500%);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

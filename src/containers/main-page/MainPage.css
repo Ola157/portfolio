@@ -1,0 +1,6 @@
+body, .main-page-container {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+

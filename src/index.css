@@ -1,0 +1,12 @@
+:root {
+  --color-bg: #FAF7F2;           /* Warm White - Main background */
+  --color-text: #232323;         /* Fair Black - Primary text */
+  --color-text-secondary: #44413C; /* Soft Charcoal - Secondary text */
+  --color-accent: #C9A227;       /* Deep Gold - Primary accent */
+  --color-accent2: #FF7F50;      /* Warm Coral - Secondary accent */
+  --color-card-bg: #F5EBDD;      /* Light Sand - Card/modal background */
+  --color-border: #E0D6C3;       /* Pale Taupe - Borders/dividers */
+  --color-muted: #BDB6AD;        /* Mist Gray - Disabled/muted */
+}
+
+

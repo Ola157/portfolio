@@ -1,0 +1,325 @@
+body, .info-page, .info-container {
+  background: var(--color-bg);
+}
+
+/* Sidebar Styling */
+.info-sidebar {
+  position: sticky;
+  top: 0;
+  padding-top: 60px;
+  height: 45vh;
+  background-color: rgba(0, 0, 0, 0); 
+  overflow-y: auto; /* Scrollable if content exceeds height */
+}
+
+.info-dynamic-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-text);
+  line-height: 1.5;
+  height: 100px;
+  transition: all 0.3s ease; /* Smooth text transition */
+}
+
+@media (max-width: 1000px) and (min-width: 770px) {
+  .info-dynamic-text {
+    height: 200px;
+  }
+
+}
+
+.info-sidebar-nav .info-nav-link {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: color 0.3s ease, border-left 0.3s ease;
+}
+
+.info-tabs {
+  border-bottom: none;
+  padding-top: 35px;
+}
+
+.info-sidebar-nav .info-nav-link:hover {
+  color: var(--color-accent);
+}
+
+.info-sidebar-nav .info-nav-active {
+  color: var(--color-accent);
+  font-weight: bold;
+  border-radius: 4px 0 0 4px;
+  border-left: 3px solid var(--color-accent); /* White left border for active section */
+}
+
+/* Tabs Styling */
+.info-tabs .info-tab-link {
+  color: var(--color-text-secondary);
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+}
+
+.info-tabs .info-tab-link:hover {
+  color: var(--color-accent);
+}
+
+.info-tabs .info-tab-active {
+  color: var(--color-accent);
+  font-weight: bold;
+  border: 1px solid var(--color-accent);
+}
+
+/* Info Section Styling */
+.info-section {
+  min-height: 80vh;
+  background-color: var(--color-bg);
+  border-radius: 12px;
+  color: var(--color-text);
+  margin-bottom: 2rem;
+}
+
+/* Section Heading */
+.info-section h2 {
+  font-size: 2.5rem; /* Larger heading size for emphasis */
+  font-weight: 700; /* Bold text for clear hierarchy */
+  margin-bottom: 1.5rem; /* Space below heading */
+  text-transform: capitalize; /* Uniform styling for section headings */
+  color: var(--color-accent); /* Accent color for headings */
+  position: relative; /* Required for ::after positioning */
+  padding-bottom: 0.5rem; /* Space for underline */
+}
+
+/* Underline animation */
+.info-section h2::after {
+  content: ""; /* Creates a visual element */
+  position: absolute;
+  bottom: 0; /* Position the line at the bottom of the heading */
+  left: 0; /* Start at the left */
+  width: 0%; /* Initial width of the line */
+  height: 2px; /* Thickness of the underline */
+  background-color: var(--color-accent); /* Color of the underline */
+  transition: width 0.5s ease-out; /* Smooth animation */
+}
+
+/* Hover effect to trigger animation */
+.info-section h2:hover::after {
+  width: 100%; /* Expands the underline to full width */
+}
+
+/* Section Paragraphs */
+.info-section p {
+  font-size: 1.2rem; /* Maintain readability */
+  line-height: 1.8; /* Comfortable line spacing for text */
+  margin-bottom: 1rem; /* Space between paragraphs */
+}
+
+/* Section Lists */
+.info-section ul {
+  padding-left: 1.5rem; /* Indent lists */
+  list-style-type: disc; /* Standard bullet points */
+}
+
+.info-section ul li {
+  margin-bottom: 0.5rem; /* Space between list items */
+  font-size: 1.1rem; /* Slightly smaller than paragraphs */
+}
+
+.about-carousel img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  display: block;
+}
+
+.info-dynamic-content {
+  margin-top: 2rem;
+}
+
+.info-dynamic-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-text); /* White text */
+}
+
+@media (max-width: 768px) {
+  .info-section h2::after {
+    width: 100%; /* Expands the underline to full width */
+  }
+
+  .about-carousel img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .info-section {
+    padding: 2rem 1.5rem; /* Adjust padding for smaller screens */
+  }
+
+  .info-section h2 {
+    font-size: 2rem; /* Reduce heading size for small screens */
+  }
+
+  .info-section p {
+    font-size: 1rem; /* Adjust paragraph size */
+  }
+
+  .info-dynamic-text {
+    height: 175px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-text); /* White text */
+  }
+
+  /* Tabs Styling */
+  .info-tabs .info-tab-link {
+    padding: 0.25rem 0.4rem;
+  }
+  #mobile-navbar {
+    background: var(--color-bg);
+    backdrop-filter: blur(10px);
+  }
+  .info-nav-link {
+    color: var(--color-text-secondary);
+  }
+  .info-nav-active {
+    color: var(--color-accent); /* Active white color */
+    font-weight: bold;
+    border-bottom: 3px solid var(--color-accent); /* White left border for active section */
+  }
+  .info-nav-link:hover {
+    color: var(--color-accent); /* Highlight white on hover */
+  }
+  .custom-menu-btn {
+    position: sticky; /* Button scrolls with the content but remains visible at the top */
+    top: 65px;
+    right: 20px;
+    z-index: 1100; 
+  }
+}
+
+.info-section ul {
+  list-style: none;
+  padding-left: 0; 
+}
+.info-section ul li {
+  margin-bottom: 0.5rem; 
+  display: flex; 
+  align-items: center;
+}
+
+.info-section ul li .icon {
+  margin-right: 0.5rem; 
+  font-size: 1.5rem; 
+}
+
+.info-section ul li .big {
+  font-size: 1.85rem; 
+}
+
+.info-section ul li strong {
+  margin-right: 0.5rem; /* Adds space between the colon and the text */
+}
+/* Adjust list items for mobile view */
+@media (max-width: 768px) {
+  .info-section ul li {
+    display: flex;
+    align-items: flex-start; /* Align icon and text to the top */
+    margin-bottom: 1rem; /* Space between items */
+    flex-wrap: wrap; /* Allow wrapping of text for smaller screens */
+  }
+
+  .info-section ul li .icon {
+    flex-shrink: 0; /* Prevent icon from shrinking */
+    margin-right: 0.75rem; /* Space between icon and text */
+    font-size: 1.2rem; /* Adjust icon size */
+    margin-top: 0.3rem; /* Align icon with the text vertically */
+  }
+
+  .info-section ul li strong {
+    margin-right: 0.5rem; /* Add spacing between title and description */
+    font-size: 1rem; /* Ensure text is readable on mobile */
+    font-weight: bold;
+  }
+
+  .info-section ul {
+    padding-left: 0; /* Remove unnecessary padding on mobile */
+  }
+}
+.contact-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; /* Align content to the left for lighter feel */
+  gap: 1rem; /* Add spacing between text and links */
+}
+
+.contact-text {
+  font-size: 1.3rem !important;
+  margin-left: 10px !important; 
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align each link to the left */
+  gap: 0.5rem; /* Space between links */
+}
+
+.contact-item {
+  font-size: 1.3rem;/* Reduce font size slightly */
+  color: var(--color-text-secondary); /* Maintain contrast for links */
+  text-decoration: none; /* Remove underline */
+  font-weight: 500; /* Medium weight for clear visibility */
+  position: relative; /* Needed for hover effect */
+  transition: color 0.3s ease;
+}
+
+.contact-item::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 1px;
+  background-color: var(--color-accent); /* Light blue for underline effect */
+  transition: width 0.3s ease-in-out;
+}
+
+.contact-item:hover::after {
+  width: 100%; /* Underline expands on hover */
+}
+/* Pulsating Dot */
+.radius {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(40, 167, 69, 0); /* Green color */
+  animation: pulse 3s cubic-bezier(0.1, 0.5, 0.6, 1) infinite;
+}
+
+.dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #28a745; /* Solid green for the dot */
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    background-color: rgba(40, 167, 69, 0.3); /* Faint green */
+    transform: scale(1);
+  }
+  66.666% {
+    background-color: rgba(40, 167, 69, 0.1); /* Fading green */
+    transform: scale(4);
+  }
+  100% {
+    background-color: rgba(40, 167, 69, 0); /* Fully transparent */
+    transform: scale(6);
+  }
+}

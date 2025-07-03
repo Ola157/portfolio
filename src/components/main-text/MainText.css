@@ -1,0 +1,49 @@
+/* Main wrapper for text and tree */
+.main-text-wrapper {
+  display: flex;
+  justify-content: space-between; /* Text on the left, tree on the right */
+  align-items: center;
+  margin-top: 50px; /* Space above the section */
+  min-height: calc(100vh - 150px); /* Full viewport height minus margins */
+  padding: 0 60px; /* Add horizontal padding */
+  flex-wrap: wrap; /* Allows content to wrap on smaller screens */
+}
+
+/* Left section for text */
+.main-text-left {
+  flex: 1; /* Take 1 portion of available space */
+  max-width: 600px; /* Constrain width */
+}
+
+/* Right section for tree */
+.main-text-right {
+  flex: 1; /* Take remaining space */
+  display: flex;
+  justify-content: center; /* Center the canvas horizontally */
+  align-items: center; /* Center the canvas vertically */
+  height: 100%;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .main-text-wrapper {
+    flex-direction: column-reverse; /* Stack elements vertically */
+    padding: 0 15px; /* Reduce padding for smaller screens */
+  }
+
+  .main-text-left {
+    margin-bottom: 20px; /* Add space between text and tree */
+  }
+
+  .main-text-right {
+    width: 100%; /* Full width for the tree */
+  }
+}
+
+.main-text {
+  color: var(--color-text);
+}
+
+.sub-text, .sub-text-formerly {
+  color: var(--color-text);
+}
